@@ -5,6 +5,8 @@ check() { for p in "$@"; do dpkg -l "$p" 2>/dev/null | grep -q '^ii' && echo "$p
 apt update
 check install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev liblzma-dev tk-dev libxml2-dev libxmlsec1-dev git curl
 
+cd /scripts
+
 wget https://www.python.org/ftp/python/3.12.7/Python-3.12.7.tgz
 tar -xf Python-3.12.7.tgz
 cd Python-3.12.7
